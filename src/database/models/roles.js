@@ -1,4 +1,3 @@
-'use strict';
 module.exports = (sequelize, DataTypes) => {
   const roles = sequelize.define('roles', {
     id: {
@@ -11,7 +10,6 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
   }, {});
   roles.associate = function (models) {
-    // associations can be defined here
     roles.belongsToMany(models.user, { through: 'user_role' });
     roles.add
   };

@@ -1,4 +1,3 @@
-'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('users', {
@@ -7,52 +6,54 @@ module.exports = {
         type: Sequelize.UUID,
         primaryKey: true,
       },
-      bio:{
+      bio: {
         type: Sequelize.TEXT,
-        allowNull:true
+        allowNull: true
       },
-      birth_date:{
+      birth_date: {
         type: Sequelize.DATE,
-        allowNull:true
+        allowNull: true
       },
-      email:{
+      email: {
         type: Sequelize.STRING,
-        allowNull:false
+        allowNull: false
       },
-      first_name:{
-        type:Sequelize.STRING,
-        allowNull:false
+      first_name: {
+        type: Sequelize.STRING,
+        allowNull: false
       },
-      last_name:{
-        type:Sequelize.STRING,
-        allowNull:false
+      last_name: {
+        type: Sequelize.STRING,
+        allowNull: false
       },
-      last_signed:{
-        type:Sequelize.DATE,
-        allowNull:false
+      last_signed: {
+        type: Sequelize.DATE,
+        allowNull: false
       },
-      location_id:{
+      location_id: {
         type: Sequelize.UUID,
-        references:{
-          model:'locations',
-          key:'id'
+        references: {
+          model: 'locations',
+          key: 'id'
         },
-        onUpdate:'SET NULL',
+        onUpdate: 'SET NULL',
         onDelete: 'SET NULL',
       },
-      password:{
-        type:Sequelize.STRING,
-        allowNull:false
+      password: {
+        type: Sequelize.STRING,
+        allowNull: false
       },
-      profile_picture:{
-        type:Sequelize.STRING,
-        allowNull:false
+      profile_picture: {
+        type: Sequelize.STRING,
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        field: 'created_at'
       },
       updatedAt: {
+        field: 'updated_at',
         allowNull: false,
         type: Sequelize.DATE
       }

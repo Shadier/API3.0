@@ -1,4 +1,3 @@
-'use strict';
 module.exports = (sequelize, DataTypes) => {
   const groups = sequelize.define('groups', {
     id: {
@@ -11,7 +10,6 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING
   }, {});
   groups.associate = function (models) {
-    // associations can be defined here
     groups.hasMany(models.user, { through: 'group_user' });
     groups.hasMany(models.sponsees, { through: 'group_sponsee' });
   };

@@ -1,4 +1,3 @@
-'use strict';
 module.exports = (sequelize, DataTypes) => {
   const locations = sequelize.define('locations', {
     id: {
@@ -12,7 +11,6 @@ module.exports = (sequelize, DataTypes) => {
     image: DataTypes.STRING,
    }, {});
   locations.associate = function (models) {
-    // associations can be defined here
     locations.hasOne(models.organizations)
   };
   return locations;

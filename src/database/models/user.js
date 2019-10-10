@@ -1,4 +1,3 @@
-'use strict';
 module.exports = (sequelize, DataTypes) => {
   const user = sequelize.define('user', {
     id: {
@@ -18,14 +17,10 @@ module.exports = (sequelize, DataTypes) => {
     profile_picture: DataTypes.STRING
   }, {});
   user.associate = function (models) {
-    // associations can be defined here
     user.hasOne(models.locations);
     user.belongsToMany(models.sponsees, { through: 'sponsor_sponsees' });
     user.belongsToMany(models.roles, { through: 'user_role' });
     user.belongsToMany(models.groups, { through: 'group_user' });
   };
-
-
-
   return user;
 };

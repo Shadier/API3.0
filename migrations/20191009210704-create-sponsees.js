@@ -1,4 +1,3 @@
-'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('sponsees', {
@@ -7,40 +6,42 @@ module.exports = {
         type: Sequelize.UUID,
         primaryKey: true,
       },
-      bio:{
+      bio: {
         type: Sequelize.TEXT,
-        allowNull:true
+        allowNull: true
       },
-      birth_date:{
+      birth_date: {
         type: Sequelize.DATE,
         allowNull: true
       },
-      first_name:{
+      first_name: {
         type: Sequelize.STRING,
-        allowNull:false,
+        allowNull: false,
       },
-      last_name:{
+      last_name: {
         type: Sequelize.STRING,
-        allowNull:false
+        allowNull: false
       },
-      location_id:{
+      location_id: {
         type: Sequelize.UUID,
-        references:{
-          model:'locations',
-          key:'id'
+        references: {
+          model: 'locations',
+          key: 'id'
         },
-        onUpdate:'SET NULL',
+        onUpdate: 'SET NULL',
         onDelete: 'SET NULL',
       },
-      profile_picture:{
-        type:Sequelize.STRING,
-        allowNull:true
+      profile_picture: {
+        type: Sequelize.STRING,
+        allowNull: true
       },
       createdAt: {
+        field: 'created_at',
         allowNull: false,
         type: Sequelize.DATE
       },
       updatedAt: {
+        field: 'updated_at',
         allowNull: false,
         type: Sequelize.DATE
       }

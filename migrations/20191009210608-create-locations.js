@@ -1,4 +1,3 @@
-'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('locations', {
@@ -7,26 +6,28 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.UUID
       },
-      name:{
+      name: {
         type: Sequelize.STRING,
         allowNull: false
       },
-      image:{
+      image: {
         type: Sequelize.STRING,
         allowNull: true
       },
-      organization_id:{
+      organization_id: {
         type: Sequelize.UUID,
-        references:{
-          model:'organizations',
-          key:'id'
+        references: {
+          model: 'organizations',
+          key: 'id'
         },
       },
       createdAt: {
+        field: 'created_at',
         allowNull: false,
         type: Sequelize.DATE
       },
       updatedAt: {
+        field: 'updated_at',
         allowNull: false,
         type: Sequelize.DATE
       }

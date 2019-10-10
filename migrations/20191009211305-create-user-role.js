@@ -1,31 +1,32 @@
-'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('user_role', {
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE,
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE,
-      },
       role_id: {
         primaryKey: true,
         type: Sequelize.UUID,
-        references:{
-          model:'roles',
-          key:'id'
+        references: {
+          model: 'roles',
+          key: 'id'
         },
       },
       user_id: {
         primaryKey: true,
         type: Sequelize.UUID,
-        references:{
-          model:'users',
-          key:'id'
+        references: {
+          model: 'users',
+          key: 'id'
         },
-      }
+      },
+      createdAt: {
+        field: 'created_at',
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updatedAt: {
+        field: 'updated_at',
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
     });
   },
   down: (queryInterface, Sequelize) => {

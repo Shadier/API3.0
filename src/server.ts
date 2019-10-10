@@ -1,7 +1,6 @@
 import express from 'express';
 import { config } from './config';
 import { sequelize } from './database/databaseConection'
-import { User } from './database/models/UserModel'
 import initializeApp from './loaders';
 
 

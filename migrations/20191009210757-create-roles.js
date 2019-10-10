@@ -1,4 +1,3 @@
-'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('roles', {
@@ -7,15 +6,17 @@ module.exports = {
         type: Sequelize.UUID,
         primaryKey: true,
       },
-      name:{
+      name: {
         type: Sequelize.STRING,
-        allowNull:false
+        allowNull: false
       },
       createdAt: {
+        field: 'created_at',
         allowNull: false,
         type: Sequelize.DATE
       },
       updatedAt: {
+        field: 'updated_at',
         allowNull: false,
         type: Sequelize.DATE
       }

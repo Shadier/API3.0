@@ -1,4 +1,3 @@
-'use strict';
 module.exports = (sequelize, DataTypes) => {
   const sponsor_sponsee = sequelize.define('sponsor_sponsee', {
     sponsee_id: {
@@ -15,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {});
   sponsor_sponsee.associate = function (models) {
-    // associations can be defined here
   };
   return sponsor_sponsee;
 };
