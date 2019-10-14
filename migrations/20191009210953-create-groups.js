@@ -6,6 +6,15 @@ module.exports = {
         type: Sequelize.UUID,
         primaryKey: true,
       },
+      location_id: {
+        type: Sequelize.UUID,
+        references: {
+          model: 'locations',
+          key: 'id'
+        },
+        onUpdate: 'SET NULL',
+        onDelete: 'SET NULL',
+      },
       name: {
         allowNull: false,
         type: Sequelize.STRING
