@@ -1,6 +1,7 @@
 import { sequelize } from '../databaseConection';
 import { Sequelize, Model, DataTypes, BuildOptions, UUIDV4 } from 'sequelize';
 import { User } from './user_model';
+import { UserRole } from './user_role_model';
 
 export class Roles extends Model {
     public id!: string;
@@ -32,4 +33,4 @@ Roles.init({
     tableName: 'roles'
 });
 
-Roles.belongsToMany(User, { through: 'user_role' });
+Roles.belongsToMany(User, { through: UserRole });
