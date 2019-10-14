@@ -1,14 +1,14 @@
 import { sequelize } from '../databaseConection';
 import { Model, DataTypes } from 'sequelize';
 
-export class Group_User extends Model {
+export class GroupUser extends Model {
     public group_id!: string;
     public user_id!: string;
     public readonly createdAt!: Date;
     public readonly updatedAt!: Date;
 }
 
-Group_User.init({
+GroupUser.init({
     group_id: {
         type: DataTypes.UUID,
         primaryKey: true

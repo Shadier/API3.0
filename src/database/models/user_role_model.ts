@@ -1,14 +1,14 @@
 import { sequelize } from '../databaseConection';
 import { Model, DataTypes } from 'sequelize';
 
-export class User_Role extends Model {
+export class UserRole extends Model {
     public role_id!: string;
     public user_id!: string;
     public readonly createdAt!: Date;
     public readonly updatedAt!: Date;
 }
 
-User_Role.init({
+UserRole.init({
     role_id: {
         type: DataTypes.UUID,
         primaryKey: true
