@@ -3,6 +3,8 @@ import { Model, DataTypes, UUIDV4 } from 'sequelize';
 import { Location } from './location_model';
 import { User } from './user_model';
 import { Groups } from './groups_model';
+import { SponsorSponsee } from './sponsor_sponsee_model';
+import { GroupSponsee } from './group_sponsee_model';
 
 export class Sponsees extends Model {
     public id!: string;
@@ -62,5 +64,5 @@ Sponsees.init({
 });
 
 Sponsees.belongsTo(Location, { as: 'Location', targetKey: 'id', foreignKey: 'location_id' });
-Sponsees.belongsToMany(User, { through: 'sponsor_sponsee' });
-Sponsees.belongsToMany(Groups, { through: 'group_sponsee' });
+Sponsees.belongsToMany(User, { through: SponsorSponsee });
+Sponsees.belongsToMany(Groups, { through: GroupSponsee });

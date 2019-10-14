@@ -8,6 +8,6 @@ export const config = {
     dialect: process.env.DIALECT || 'mysql',
     databaseURL: process.env.DATABASE_URI || 'localhost',
     databaseUser: process.env.DATABASEUSER || 'root',
-    databasePassword: process.env.DATABASEPASS || 'admin',
+    databasePassword: process.env.DATABASEPASS || '',
     databaseName: process.env.DATABASENAME || 'casaguatemala'
 }

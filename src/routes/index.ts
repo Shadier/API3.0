@@ -1,10 +1,10 @@
 import { Router } from "express";
-import modelRouter from "./ModelsRoutes";
+import teacherRouter from "./TeachersRoutes";
 
 const router = () => {
     const apiRoutes = Router();
     // Apply model Routes to the app
-    modelRouter(apiRoutes);
+    teacherRouter(apiRoutes);
 
     return apiRoutes;
 }
