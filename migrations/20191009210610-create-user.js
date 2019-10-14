@@ -28,7 +28,7 @@ module.exports = {
       },
       last_signed: {
         type: Sequelize.DATE,
-        allowNull: false
+        allowNull: true
       },
       location_id: {
         type: Sequelize.UUID,
@@ -45,7 +45,7 @@ module.exports = {
       },
       profile_picture: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull:true
       },
       createdAt: {
         allowNull: false,
