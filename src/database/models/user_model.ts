@@ -4,6 +4,9 @@ import { Location } from './location_model';
 import { Sponsees } from './sponsees_model';
 import { Roles } from './roles_model';
 import { Groups } from './groups_model';
+import { SponsorSponsee } from './sponsor_sponsee_model';
+import { UserRole } from './user_role_model';
+import { GroupUser } from './group_user_model';
 
 export class User extends Model {
     public id!: string;
@@ -77,6 +80,6 @@ User.init({
 });
 
 User.belongsTo(Location, { as: 'Location', targetKey: 'id', foreignKey: 'location_id' });
-User.belongsToMany(Sponsees, { through: 'sponsor_sponsee' });
-User.belongsToMany(Roles, { through: 'user_role' });
-User.belongsToMany(Groups, { through: 'group_user' });
+User.belongsToMany(Sponsees, { through: SponsorSponsee });
+User.belongsToMany(Roles, { through: UserRole });
+User.belongsToMany(Groups, { through: GroupUser });
