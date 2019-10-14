@@ -16,10 +16,10 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "root",
-    "password": "admin",
-    "database": "casaguatemala",
-    "host": "127.0.0.1",
+    "username": "%username%",
+    "password": "%password%",
+    "database": "%database%",
+    "host": "%host%",
     "dialect": "mysql",
     "operatorsAliases": false
   }

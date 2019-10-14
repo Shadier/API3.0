@@ -4,10 +4,10 @@ dotenv.config();
 
 export const config = {
     port: process.env.PORT || 3000,
-    portDatabase: process.env.PORTDATABASE || '3306',
+    portDatabase: process.env.DATABASE_PORT || '3306',
     dialect: process.env.DIALECT || 'mysql',
     databaseURL: process.env.DATABASE_URI || 'localhost',
-    databaseUser: process.env.DATABASEUSER || 'root',
-    databasePassword: process.env.DATABASEPASS || 'admin',
-    databaseName: process.env.DATABASENAME || 'casaguatemala'
+    databaseUser: process.env.DATABASE_USER || 'root',
+    databasePassword: process.env.DATABASE_PASS || 'admin',
+    databaseName: process.env.DATABASE_NAME || 'casaguatemala'
 }
