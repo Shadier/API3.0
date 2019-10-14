@@ -11,7 +11,7 @@ module.exports = {
       last_name: 'Admin',
       last_signed: new Date(),
       location_id: 'cec8fe56-43f8-4275-9ed1-94d5319e02a4',
-      password: 'admin',
+      password: '$2y$12$.x4Phhy9sJ9iuacLpth26OXxeOQDzgDYXVajxNRSaZ7FYzb6pQlua',
       created_at: new Date(),
       updated_at: new Date()
     }, {
@@ -23,7 +23,7 @@ module.exports = {
       last_name: 'teacher1',
       last_signed: new Date(),
       location_id: 'cec8fe56-43f8-4275-9ed1-94d5319e02a4',
-      password: 'teacher',
+      password: '$2y$12$.x4Phhy9sJ9iuacLpth26OXxeOQDzgDYXVajxNRSaZ7FYzb6pQlua',
       created_at: new Date(),
       updated_at: new Date()
     }, {
@@ -35,7 +35,7 @@ module.exports = {
       last_name: 'teacher2',
       last_signed: new Date(),
       location_id: 'cec8fe56-43f8-4275-9ed1-94d5319e02a4',
-      password: 'teacher',
+      password: '$2y$12$.x4Phhy9sJ9iuacLpth26OXxeOQDzgDYXVajxNRSaZ7FYzb6pQlua',
       created_at: new Date(),
       updated_at: new Date()
     }, {
@@ -47,7 +47,7 @@ module.exports = {
       last_name: 'teacher3',
       last_signed: new Date(),
       location_id: 'cec8fe56-43f8-4275-9ed1-94d5319e02a4',
-      password: 'teacher',
+      password: '$2y$12$.x4Phhy9sJ9iuacLpth26OXxeOQDzgDYXVajxNRSaZ7FYzb6pQlua',
       created_at: new Date(),
       updated_at: new Date()
     }, {
@@ -59,7 +59,7 @@ module.exports = {
       last_name: 'teacher4',
       last_signed: new Date(),
       location_id: 'cec8fe56-43f8-4275-9ed1-94d5319e02a4',
-      password: 'teacher',
+      password: '$2y$12$.x4Phhy9sJ9iuacLpth26OXxeOQDzgDYXVajxNRSaZ7FYzb6pQlua',
       created_at: new Date(),
       updated_at: new Date()
     }, {
@@ -71,7 +71,7 @@ module.exports = {
       last_name: 'sponsor1',
       last_signed: new Date(),
       location_id: 'cec8fe56-43f8-4275-9ed1-94d5319e02a4',
-      password: 'sponsor',
+      password: '$2y$12$.x4Phhy9sJ9iuacLpth26OXxeOQDzgDYXVajxNRSaZ7FYzb6pQlua',
       created_at: new Date(),
       updated_at: new Date()
     }, {
@@ -83,7 +83,7 @@ module.exports = {
       last_name: 'sponsor2',
       last_signed: new Date(),
       location_id: 'cec8fe56-43f8-4275-9ed1-94d5319e02a4',
-      password: 'sponsor',
+      password: '$2y$12$.x4Phhy9sJ9iuacLpth26OXxeOQDzgDYXVajxNRSaZ7FYzb6pQlua',
       created_at: new Date(),
       updated_at: new Date()
     }, {
@@ -95,7 +95,7 @@ module.exports = {
       last_name: 'sponsor3',
       last_signed: new Date(),
       location_id: 'cec8fe56-43f8-4275-9ed1-94d5319e02a4',
-      password: 'sponsor',
+      password: '$2y$12$.x4Phhy9sJ9iuacLpth26OXxeOQDzgDYXVajxNRSaZ7FYzb6pQlua',
       created_at: new Date(),
       updated_at: new Date()
     }, {
@@ -107,7 +107,7 @@ module.exports = {
       last_name: 'sponsor4',
       last_signed: new Date(),
       location_id: 'cec8fe56-43f8-4275-9ed1-94d5319e02a4',
-      password: 'sponsor',
+      password: '$2y$12$.x4Phhy9sJ9iuacLpth26OXxeOQDzgDYXVajxNRSaZ7FYzb6pQlua',
       created_at: new Date(),
       updated_at: new Date()
     }], {});
