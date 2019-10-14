@@ -1,23 +1,20 @@
 import { sequelize } from '../databaseConection';
-import { Model, DataTypes, UUIDV4 } from 'sequelize';
+import { Model, DataTypes } from 'sequelize';
 
-export class User_Role extends Model {
+export class Group_User extends Model {
     public group_id!: string;
     public user_id!: string;
-
     public readonly createdAt!: Date;
     public readonly updatedAt!: Date;
 }
 
-User_Role.init({
+Group_User.init({
     group_id: {
         type: DataTypes.UUID,
-        defaultValue: UUIDV4,
         primaryKey: true
     },
     user_id: {
         type: DataTypes.UUID,
-        defaultValue: UUIDV4,
         primaryKey: true
     },
     createdAt: {

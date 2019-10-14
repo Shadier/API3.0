@@ -1,5 +1,5 @@
 import { sequelize } from './../databaseConection';
-import { Sequelize, Model, DataTypes, BuildOptions, UUIDV4 } from 'sequelize';
+import { Model, DataTypes, UUIDV4 } from 'sequelize';
 import { Location } from './location_model';
 import { Sponsees } from './sponsees_model';
 import { Roles } from './roles_model';
@@ -18,9 +18,7 @@ export class User extends Model {
     public profile_picture?: string;
     public readonly createdAt!: Date;
     public readonly updatedAt!: Date;
-
     public location?: Location;
-
 }
 
 User.init({
@@ -61,9 +59,9 @@ User.init({
         type: DataTypes.STRING,
         allowNull: false
     },
-    profile_picture:{
-        type:DataTypes.STRING,
-        allowNull:true
+    profile_picture: {
+        type: DataTypes.STRING,
+        allowNull: true
     },
     createdAt: {
         type: DataTypes.DATE,
@@ -73,13 +71,12 @@ User.init({
         type: DataTypes.DATE,
         field: 'updated_at'
     }
-
 }, {
     sequelize: sequelize,
     tableName: 'users'
 });
 
-User.belongsTo(Location, { as: 'Location', targetKey: 'id', foreignKey:'location_id' });
-User.belongsToMany(Sponsees, {through: 'sponsor_sponsee'});
-User.belongsToMany(Roles,{through:'user_role'});
-User.belongsToMany(Groups,{through: 'group_user'});
+User.belongsTo(Location, { as: 'Location', targetKey: 'id', foreignKey: 'location_id' });
+User.belongsToMany(Sponsees, { through: 'sponsor_sponsee' });
+User.belongsToMany(Roles, { through: 'user_role' });
+User.belongsToMany(Groups, { through: 'group_user' });

@@ -1,10 +1,9 @@
 import { sequelize } from '../databaseConection';
-import { Model, DataTypes, UUIDV4 } from 'sequelize';
+import { Model, DataTypes } from 'sequelize';
 
 export class Sponsor_Sponsee extends Model {
     public sponsee_id!: string;
     public sponsor_id!: string;
-
     public readonly createdAt!: Date;
     public readonly updatedAt!: Date;
 }
@@ -12,12 +11,10 @@ export class Sponsor_Sponsee extends Model {
 Sponsor_Sponsee.init({
     sponsee_id: {
         type: DataTypes.UUID,
-        defaultValue: UUIDV4,
         primaryKey: true
     },
     sponsor_id: {
         type: DataTypes.UUID,
-        defaultValue: UUIDV4,
         primaryKey: true
     },
     createdAt: {

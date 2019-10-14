@@ -5,7 +5,6 @@ import { User } from './user_model';
 export class Roles extends Model {
     public id!: string;
     public name!: string;
-
     public readonly createdAt!: Date;
     public readonly updatedAt!: Date;
 }

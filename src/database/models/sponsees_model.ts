@@ -1,5 +1,5 @@
 import { sequelize } from './../databaseConection';
-import { Sequelize, Model, DataTypes, BuildOptions, UUIDV4 } from 'sequelize';
+import { Model, DataTypes, UUIDV4 } from 'sequelize';
 import { Location } from './location_model';
 import { User } from './user_model';
 import { Groups } from './groups_model';
@@ -12,12 +12,9 @@ export class Sponsees extends Model {
     public last_name!: string;
     public location_id?: string;
     public profile_picture?: string;
-
     public readonly createdAt!: Date;
     public readonly updatedAt!: Date;
-
     public location?: Location;
-
 }
 
 Sponsees.init({
@@ -64,6 +61,6 @@ Sponsees.init({
     tableName: 'sponsees'
 });
 
-Sponsees.belongsTo(Location, { as: 'Location', targetKey: 'id', foreignKey:'location_id' });
-Sponsees.belongsToMany(User,{through:'sponsor_sponsee'});
-Sponsees.belongsToMany(Groups,{through:'group_sponsee'});
+Sponsees.belongsTo(Location, { as: 'Location', targetKey: 'id', foreignKey: 'location_id' });
+Sponsees.belongsToMany(User, { through: 'sponsor_sponsee' });
+Sponsees.belongsToMany(Groups, { through: 'group_sponsee' });

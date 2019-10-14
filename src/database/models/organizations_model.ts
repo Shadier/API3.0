@@ -1,13 +1,11 @@
 import { sequelize } from '../databaseConection';
-import { Sequelize, Model, DataTypes, BuildOptions, UUIDV4 } from 'sequelize';
+import { Model, DataTypes, UUIDV4 } from 'sequelize';
 
 export class Organization extends Model {
     public id!: string;
     public name!: string;
     public description!: string;
     public image?: string;
-
-
     public readonly createdAt!: Date;
     public readonly updatedAt!: Date;
 }

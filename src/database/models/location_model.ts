@@ -1,17 +1,15 @@
 import { sequelize } from '../databaseConection';
-import { Sequelize, Model, DataTypes, BuildOptions, UUIDV4 } from 'sequelize';
-import { Organization } from './organization_model';
+import { Model, DataTypes, UUIDV4 } from 'sequelize';
+import { Organization } from './organizations_model';
 
-export class Location  extends Model {
+export class Location extends Model {
     public id!: string;
     public name!: string;
     public description!: string;
     public organization_id!: string;
     public image!: string;
-    
     public readonly createdAt!: Date;
     public readonly updatedAt!: Date;
-
     public organization!: Organization;
 }
 
@@ -49,6 +47,5 @@ Location.init({
     sequelize: sequelize,
     tableName: 'locations'
 });
-
 
 Location.hasOne(Organization, { as: 'Organization', sourceKey: 'id', foreignKey: 'organization_id' })
