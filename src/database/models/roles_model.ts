@@ -33,4 +33,4 @@ Roles.init({
     tableName: 'roles'
 });
 
-Roles.belongsToMany(User, { through: UserRole });
+// Roles.belongsToMany(User, { through: UserRole });

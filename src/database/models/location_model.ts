@@ -48,4 +48,4 @@ Location.init({
     tableName: 'locations'
 });
 
-Location.hasOne(Organization, { as: 'Organization', sourceKey: 'id', foreignKey: 'organization_id' })
+// Location.hasOne(Organization, { as: 'Organization', sourceKey: 'id', foreignKey: 'organization_id' })

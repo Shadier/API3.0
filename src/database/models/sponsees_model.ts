@@ -63,6 +63,6 @@ Sponsees.init({
     tableName: 'sponsees'
 });
 
-Sponsees.belongsTo(Location, { as: 'Location', targetKey: 'id', foreignKey: 'location_id' });
-Sponsees.belongsToMany(User, { through: SponsorSponsee });
-Sponsees.belongsToMany(Groups, { through: GroupSponsee });
+// Sponsees.belongsTo(Location, { as: 'Location', targetKey: 'id', foreignKey: 'location_id' });
+// Sponsees.belongsToMany(User, { through: SponsorSponsee });
+// Sponsees.belongsToMany(Groups, { through: GroupSponsee });

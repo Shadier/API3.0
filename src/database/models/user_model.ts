@@ -79,7 +79,7 @@ User.init({
     tableName: 'users'
 });
 
-User.belongsTo(Location, { as: 'Location', targetKey: 'id', foreignKey: 'location_id' });
-User.belongsToMany(Sponsees, { through: SponsorSponsee });
-User.belongsToMany(Roles, { through: UserRole });
-User.belongsToMany(Groups, { through: GroupUser });
+// User.belongsTo(Location, { as: 'Location', targetKey: 'id', foreignKey: 'location_id' });
+// User.belongsToMany(Sponsees, { through: SponsorSponsee });
+// User.belongsToMany(Roles, { through: UserRole });
+// User.belongsToMany(Groups, { through: GroupUser });

@@ -1,4 +1,4 @@
-export interface ITeacher {
+export interface IAdmin {
     id: string
     first_name: string
     last_name: string
@@ -7,6 +7,6 @@ export interface ITeacher {
     numSponsees: number
 }
 //interface for insert a new teacher
-export interface ITeacherInput {
+export interface IAdminInput {
     name: string;
 }

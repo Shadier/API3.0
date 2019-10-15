@@ -8,6 +8,7 @@ const teacherRouter = (app: Router) => {
     route.get('', teacherController.getAll)
     route.post('', teacherController.createTeacher);
     route.get('/:id', teacherController.find);
+    route.get('/filter/:search', teacherController.findByName);
     route.put('/:id', teacherController.updateTeacher);
 
     return app;

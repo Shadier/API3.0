@@ -41,6 +41,6 @@ Groups.init({
     tableName: 'roles'
 });
 
-Groups.hasOne(Location, { as: 'Location', sourceKey: 'id', foreignKey: 'location_id' });
-Groups.belongsToMany(User, { through: GroupUser });
-Groups.belongsToMany(Sponsees, { through: GroupSponsee });
+// Groups.hasOne(Location, { as: 'Location', sourceKey: 'id', foreignKey: 'location_id' });
+// Groups.belongsToMany(User, { through: GroupUser });
+// Groups.belongsToMany(Sponsees, { through: GroupSponsee });
