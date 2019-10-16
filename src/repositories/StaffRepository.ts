@@ -18,7 +18,7 @@ const find = (id: string) => {
 const findByName = (search: string) => {
     search = search.toLowerCase()
     return sequelize.query(
-            "SELECT u.id, u.last_signed, u.first_name, u.last_name, u.profile_picture, numSponsees(u.id) AS numSponsees FROM users u INNER JOIN user_role ur ON ur.user_id = u.id INNER JOIN roles r ON ur.role_id = r.id WHERE r.name = 'Admin' OR r.name = 'Teacher' AND (u.first_name LIKE '%"+search+"%' OR u.last_name LIKE '%"+search+"%') ", 
+            "SELECT u.id, u.last_signed, u.first_name, u.last_name, u.profile_picture, numSponsees(u.id) AS numSponsees FROM users u INNER JOIN user_role ur ON ur.user_id = u.id INNER JOIN roles r ON ur.role_id = r.id WHERE (r.name = 'Admin' OR r.name = 'Teacher') AND (u.first_name LIKE '%"+search+"%' OR u.last_name LIKE '%"+search+"%') ", 
             { type: sequelize.QueryTypes.SELECT})
 } 
 
